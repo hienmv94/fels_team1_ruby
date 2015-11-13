@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root 'static_pages#home'
 
   get "help" => 'static_pages#help'
@@ -7,8 +8,9 @@ Rails.application.routes.draw do
   
   namespace :admin do
     root 'static_pages#home'
-    resources :users
     resources :categories
+    resources :users
   end
+  
 
 end
